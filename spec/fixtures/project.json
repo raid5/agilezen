@@ -1,0 +1,9 @@
+{
+  "id": 123,
+  "name": "Hippie Peace",
+  "description": "Working towards world peace",
+  "owner": {
+    "id": 1,
+    "name": "John Doe"
+  }
+}

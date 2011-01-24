@@ -1,0 +1,22 @@
+{
+  "id": 321,
+  "text": "Feed the children",
+  "size": "large",
+  "color": "grey",
+  "ready": false,
+  "blocked": true,
+  "reasonBlocked": "Need new ideas",
+  "phase": {
+    "id": 1,
+    "name": "Backlog"
+  },
+  "phaseIndex": 0,
+  "creator": {
+    "id": 1,
+    "name": "John Doe"
+  },
+  "owner": {
+    "id": 2,
+    "name": "Jane Doe"
+  }
+}

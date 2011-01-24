@@ -1,0 +1,26 @@
+{
+  "projects": {
+    "items": {
+      "project": [
+        {
+          "id": 123,
+          "name": "World Peace",
+          "description": "Working towards world peace",
+          "owner": {
+            "id": 1,
+            "name": "John Doe"
+          }
+        },
+        {
+          "id": 124,
+          "name": "World Domination",
+          "description": "Secret plan to conquer the world",
+          "owner": {
+            "id": 2,
+            "name": "Jane Doe"
+          }
+        }
+      ]
+    }
+  }
+}
