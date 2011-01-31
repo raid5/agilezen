@@ -7,6 +7,7 @@ Gem::Specification.new do |s|
   s.email       = ['mcdonald.adam@gmail.com']
   s.homepage    = 'http://github.com/raid5/agilezen'
   s.summary     = 'Ruby wrapper for the AgileZen API'
+  s.description = s.summary
   
   s.add_development_dependency 'bundler', '~> 1.0'
   s.add_development_dependency 'rake', '~> 0.8'
