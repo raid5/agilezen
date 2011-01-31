@@ -1,0 +1,4 @@
+lib/agilezen/client.rb 46fe24af25dfcbe8fc7efcb5058616bac1ce0dc1
+lib/agilezen/stories.rb 75694c02f8b204abe75c018c38fd13a3ef42bfb2
+lib/agilezen/version.rb c32c8ac5ea97f124ff450ffa306ed35a2daa2f6f
+lib/agilezen/projects.rb bd3258fddc2991d046556865568972dcbdd0ee58
