@@ -1,17 +1,28 @@
 module AgileZen
+  # AgileZen::Projects module.
   module Projects
     
+    # Retrieve information for all projects.
     def projects(options={})
-      #connection.get('/api/v1/projects').body
-      
       response = connection.get do |req|
         req.url "/api/v1/projects", options
       end
       response.body
     end
     
-    def project(project_id)
-      connection.get("/api/v1/project/#{project_id}").body
+    # Retrieve information for an individual project.
+    def project(project_id, options={})
+      response_body = nil
+      begin
+        response = connection.get do |req|
+          req.url "/api/v1/project/#{project_id}", options
+        end
+        response_body = response.body
+      rescue MultiJson::DecodeError => e
+        #p 'Unable to parse JSON.'
+      end
+      
+      response_body
     end
     
   end

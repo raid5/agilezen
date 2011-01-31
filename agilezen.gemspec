@@ -21,7 +21,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = '>= 1.3.6'
   s.platform                  = Gem::Platform::RUBY
-  s.rubyforge_project         = "newgem"
+  s.rubyforge_project         = "agilezen"
   s.require_path              = 'lib'
   s.files                     = `git ls-files`.split("\n")
   s.test_files                = `git ls-files -- {test,spec,features}/*`.split("\n")

@@ -1,0 +1,71 @@
+{
+  "page": 2,
+  "pageSize": 3,
+  "totalPages": 4,
+  "totalItems": 10,
+  "items": [
+    {
+      "id": 4,
+      "text": "Add a post",
+      "size": "2",
+      "color": "grey",
+      "ready": false,
+      "blocked": false,
+      "phase": {
+        "id": 87565,
+        "name": "Backlog"
+      },
+      "phaseIndex": 1,
+      "creator": {
+        "id": 19059,
+        "name": "Adam"
+      },
+      "owner": {
+        "id": 19059,
+        "name": "Adam"
+      }
+    },
+    {
+      "id": 5,
+      "text": "Edit a post",
+      "size": "",
+      "color": "grey",
+      "ready": false,
+      "blocked": false,
+      "phase": {
+        "id": 87565,
+        "name": "Backlog"
+      },
+      "phaseIndex": 2,
+      "creator": {
+        "id": 19059,
+        "name": "Adam"
+      },
+      "owner": {
+        "id": 19059,
+        "name": "Adam"
+      }
+    },
+    {
+      "id": 6,
+      "text": "Delete a post",
+      "size": "",
+      "color": "grey",
+      "ready": false,
+      "blocked": false,
+      "phase": {
+        "id": 87565,
+        "name": "Backlog"
+      },
+      "phaseIndex": 3,
+      "creator": {
+        "id": 19059,
+        "name": "Adam"
+      },
+      "owner": {
+        "id": 19059,
+        "name": "Adam"
+      }
+    }
+  ]
+}

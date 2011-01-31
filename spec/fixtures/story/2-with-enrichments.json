@@ -1,0 +1,40 @@
+{
+  "id": 2,
+  "text": "User sign in",
+  "details": "The user should be able to sign in with either email or username.",
+  "size": "2",
+  "color": "grey",
+  "ready": false,
+  "blocked": false,
+  "phase": {
+    "id": 87566,
+    "name": "Ready"
+  },
+  "phaseIndex": 0,
+  "creator": {
+    "id": 19059,
+    "name": "Adam"
+  },
+  "owner": {
+    "id": 19059,
+    "name": "Adam"
+  },
+  "tags": [
+    {
+      "id": 81499,
+      "name": "sign-in"
+    },
+    {
+      "id": 81500,
+      "name": "user"
+    },
+    {
+      "id": 81501,
+      "name": "authentication"
+    }
+  ],
+  "metrics": {
+    "createTime": "/Date(1289217335000-0600)/",
+    "startTime": "/Date(1295607873000-0600)/"
+  }
+}

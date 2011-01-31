@@ -1,12 +1,35 @@
 module AgileZen
+  # AgileZen::Stories module.
   module Stories
     
-    def project_stories(project_id)
-      connection.get("/api/v1/project/#{project_id}/stories").body
+    # Retrieve information for all stories of a given project.
+    def project_stories(project_id, options={})
+      response_body = nil
+      begin
+        response = connection.get do |req|
+          req.url "/api/v1/project/#{project_id}/stories", options
+        end
+        response_body = response.body
+      rescue MultiJson::DecodeError => e
+        #p 'Unable to parse JSON.'
+      end
+      
+      response_body
     end
     
-    def project_story(project_id, story_id)
-      connection.get("/api/v1/project/#{project_id}/story/#{story_id}").body
+    # Retrieve information for an individual story of a given project.
+    def project_story(project_id, story_id, options={})
+      response_body = nil
+      begin
+        response = connection.get do |req|
+          req.url "/api/v1/project/#{project_id}/story/#{story_id}", options
+        end
+        response_body = response.body
+      rescue MultiJson::DecodeError => e
+        #p 'Unable to parse JSON.'
+      end
+      
+      response_body
     end
     
   end
