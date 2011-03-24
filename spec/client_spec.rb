@@ -7,28 +7,6 @@ describe AgileZen::Client do
       client = AgileZen::Client.new(:api_key => 'testapikey')
       client.api_key.should_not be_nil
     end
-    
-    it "ensures the ssl flag is false if not supplied" do
-      client = AgileZen::Client.new(:api_key => 'testapikey')
-      client.ssl.should be_false
-    end
-    
-    it "stores the ssl flag if supplied" do
-      client = AgileZen::Client.new(:api_key => 'testapikey', :ssl => true)
-      client.ssl.should be_true
-    end
-  end
-  
-  describe "#has_ssl?" do
-    it "checks that ssl is supported" do
-      client = AgileZen::Client.new(:api_key => 'testapikey', :ssl => true)
-      client.should have_ssl
-    end
-    
-    it "checks that ssl isn't supported" do
-      client = AgileZen::Client.new(:api_key => 'testapikey')
-      client.should_not have_ssl
-    end
   end
   
   describe "#has_required_authentication?" do
@@ -58,13 +36,8 @@ describe AgileZen::Client do
   end
   
   describe "#connection_url" do
-    it "doesn't use ssl" do
-      client = AgileZen::Client.new(:api_key => 'testapikey')
-      client.connection_url.should eq('http://agilezen.com')
-    end
-    
     it "uses ssl" do
-      client = AgileZen::Client.new(:api_key => 'testapikey', :ssl => true)
+      client = AgileZen::Client.new(:api_key => 'testapikey')
       client.connection_url.should eq('https://agilezen.com')
     end
   end

@@ -6,22 +6,15 @@ module AgileZen
     include Stories
     
     attr_accessor :api_key
-    attr_accessor :ssl
     
     # Initializer for client.
     def initialize(options ={})
       @api_key = options[:api_key]
-      @ssl = options[:ssl]
     end
     
     # Whether the client has the require auth to make API requests.
     def has_required_authentication?
       !@api_key.nil?
-    end
-    
-    # Whether to use SSL or not.
-    def has_ssl?
-      @ssl
     end
     
     # Set the Faraday::Connection
@@ -41,7 +34,7 @@ module AgileZen
     
     # Helper method for determining the correct URL.
     def connection_url
-      has_ssl? ? 'https://agilezen.com' : 'http://agilezen.com'
+      'https://agilezen.com'
     end
     
     # Helper method for defining globally required headers.

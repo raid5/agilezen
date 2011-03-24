@@ -10,7 +10,7 @@ describe AgileZen::Projects do
   describe "#projects" do
     context "success" do
       it "performs an API request for all projects" do
-        register_get('http://agilezen.com/api/v1/projects', 'projects.json')
+        register_get('https://agilezen.com/api/v1/projects', 'projects.json')
 
         response = @client.projects
 
@@ -18,7 +18,7 @@ describe AgileZen::Projects do
       end
       
       it "allows filtering" do
-        register_get('http://agilezen.com/api/v1/projects?where=name%3ADiff', 'projects-with-filtering.json')
+        register_get('https://agilezen.com/api/v1/projects?where=name%3ADiff', 'projects-with-filtering.json')
 
         response = @client.projects(:where => 'name:Diff')
         
@@ -30,7 +30,7 @@ describe AgileZen::Projects do
   describe "#project" do
     context "success" do
       it "performs an API request for a single project" do
-        register_get('http://agilezen.com/api/v1/project/123', 'project.json')
+        register_get('https://agilezen.com/api/v1/project/123', 'project.json')
 
         response = @client.project(123)
 
@@ -39,7 +39,7 @@ describe AgileZen::Projects do
       end
       
       it "includes enrichments" do
-        register_get('http://agilezen.com/api/v1/project/15404?with=details%2Cphases%2Cmembers%2Croles%2Cinvites%2Cmetrics', 'project/15404-with-enrichments.json')
+        register_get('https://agilezen.com/api/v1/project/15404?with=details%2Cphases%2Cmembers%2Croles%2Cinvites%2Cmetrics', 'project/15404-with-enrichments.json')
 
         response = @client.project(15404, :with => 'details,phases,members,roles,invites,metrics')
         
@@ -54,7 +54,7 @@ describe AgileZen::Projects do
     
     context "failure" do
       it "returns nil to indicate failure" do
-        register_get('http://agilezen.com/api/v1/project/99999', 'garbage.txt')
+        register_get('https://agilezen.com/api/v1/project/99999', 'garbage.txt')
 
         response = @client.project(99999)
 
