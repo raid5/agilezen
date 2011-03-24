@@ -15,7 +15,7 @@ module AgileZen
       response_body = nil
       begin
         response = connection.get do |req|
-          req.url "/api/v1/project/#{project_id}", options
+          req.url "/api/v1/projects/#{project_id}", options
         end
         response_body = response.body
       rescue MultiJson::DecodeError => e
