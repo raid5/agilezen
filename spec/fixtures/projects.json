@@ -1,26 +1,32 @@
 {
-  "projects": {
-    "items": {
-      "project": [
-        {
-          "id": 123,
-          "name": "World Peace",
-          "description": "Working towards world peace",
-          "owner": {
-            "id": 1,
-            "name": "John Doe"
-          }
-        },
-        {
-          "id": 124,
-          "name": "World Domination",
-          "description": "Secret plan to conquer the world",
-          "owner": {
-            "id": 2,
-            "name": "Jane Doe"
-          }
-        }
-      ]
+  "page": 1,
+  "pageSize": 100,
+  "totalPages": 1,
+  "totalItems": 2,
+  "items": [
+    {
+      "id": 1,
+      "name": "Sudden Valley",
+      "description": "I can see myself marinating a chicken in that.",
+      "createTime": "2011-02-17T18:47:16",
+      "owner": {
+        "id": 1,
+        "name": "Gob Bluth",
+        "userName": "gob",
+        "email": "Gob@bluth.com"
+      }
+    },
+    {
+      "id": 2,
+      "name": "Chicken Dance",
+      "description": "Caw-ca-caw-ca-ca-caw!",
+      "createTime": "2011-02-18T14:24:42",
+      "owner": {
+        "id": 1,
+        "name": "Gob Bluth",
+        "userName": "gob",
+        "email": "Gob@bluth.com"
+      }
     }
-  }
+  ]
 }

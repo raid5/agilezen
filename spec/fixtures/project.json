@@ -1,9 +1,12 @@
 {
-  "id": 123,
-  "name": "Hippie Peace",
-  "description": "Working towards world peace",
+  "id": 1,
+  "name": "Sudden Valley",
+  "description": "I can see myself marinating a chicken in that.",
+  "createTime": "2011-02-17T18:47:16",
   "owner": {
     "id": 1,
-    "name": "John Doe"
+    "name": "Gob Bluth",
+    "userName": "gob",
+    "email": "Gob@bluth.com"
   }
 }

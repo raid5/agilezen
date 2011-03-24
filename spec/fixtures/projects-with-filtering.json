@@ -1,6 +1,6 @@
 {
   "page": 1,
-  "pageSize": 10,
+  "pageSize": 100,
   "totalPages": 1,
   "totalItems": 1,
   "items": [
@@ -8,10 +8,12 @@
       "id": 15404,
       "name": "Difference",
       "description": "This is the project that makes a difference.",
-      "createTime": "/Date(1289217113000-0600)/",
+      "createTime": "2010-11-08T05:51:53",
       "owner": {
         "id": 19059,
-        "name": "Adam"
+        "name": "Adam",
+        "userName": "raid5",
+        "email": "amcdonald_3@yahoo.com"
       }
     }
   ]

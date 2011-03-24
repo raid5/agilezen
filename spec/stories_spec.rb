@@ -10,7 +10,7 @@ describe AgileZen::Stories do
   describe "#stories" do
     context "success" do
       it "performs an API request for all story of a given project" do
-        register_get('https://agilezen.com/api/v1/project/123/stories', 'stories.json')
+        register_get('https://agilezen.com/api/v1/projects/123/stories', 'stories.json')
 
         response = @client.project_stories(123)
 
@@ -18,8 +18,8 @@ describe AgileZen::Stories do
       end
       
       it "pages stories" do
-        register_get('https://agilezen.com/api/v1/project/15404/stories?page=1&pageSize=3', 'stories-page1.json')
-        register_get('https://agilezen.com/api/v1/project/15404/stories?page=2&pageSize=3', 'stories-page2.json')
+        register_get('https://agilezen.com/api/v1/projects/15404/stories?page=1&pageSize=3', 'stories-page1.json')
+        register_get('https://agilezen.com/api/v1/projects/15404/stories?page=2&pageSize=3', 'stories-page2.json')
         
         response1 = @client.project_stories(15404, :page => 1, :pageSize => 3)
         response2 = @client.project_stories(15404, :page => 2, :pageSize => 3)
@@ -30,7 +30,7 @@ describe AgileZen::Stories do
     
     context "failure" do
       it "returns nil to indicate failure" do
-        register_get('https://agilezen.com/api/v1/project/99999/stories', 'garbage.txt')
+        register_get('https://agilezen.com/api/v1/projects/99999/stories', 'garbage.txt')
 
         response = @client.project_stories(99999)
 
@@ -42,7 +42,7 @@ describe AgileZen::Stories do
   describe "#story" do
     context "success" do
       it "performs an API request for a single story of a given project" do
-        register_get('https://agilezen.com/api/v1/project/123/story/321', 'story.json')
+        register_get('https://agilezen.com/api/v1/projects/123/story/321', 'story.json')
 
         response = @client.project_story(123, 321)
 
@@ -51,7 +51,7 @@ describe AgileZen::Stories do
       end
       
       it "includes enrichments" do
-        register_get('https://agilezen.com/api/v1/project/15404/story/2?with=details%2Ctags%2Cmetrics', 'story/2-with-enrichments.json')
+        register_get('https://agilezen.com/api/v1/projects/15404/story/2?with=details%2Ctags%2Cmetrics', 'story/2-with-enrichments.json')
 
         response = @client.project_story(15404, 2, :with => 'details,tags,metrics')
         
@@ -61,7 +61,7 @@ describe AgileZen::Stories do
       end
       
       it "allows filtering" do
-        register_get('https://agilezen.com/api/v1/project/15404/story/2?where=tag%3Aauthentication&with=tags', 'story/2-with-filtering.json')
+        register_get('https://agilezen.com/api/v1/projects/15404/story/2?where=tag%3Aauthentication&with=tags', 'story/2-with-filtering.json')
 
         response = @client.project_story(15404, 2, :where => 'tag:authentication', :with => 'tags')
         
@@ -72,7 +72,7 @@ describe AgileZen::Stories do
 
     context "failure" do
       it "returns nil to indicate failure" do
-        register_get('https://agilezen.com/api/v1/project/99999/story/11111', 'garbage.txt')
+        register_get('https://agilezen.com/api/v1/projects/99999/story/11111', 'garbage.txt')
 
         response = @client.project_story(99999, 11111)
 

@@ -3,10 +3,12 @@
   "name": "Difference",
   "description": "This is the project that makes a difference.",
   "details": "Scope\n====\nThe scope of the project will include: 1, 2, 3, and 4. Yep, that is about it for now.",
-  "createTime": "/Date(1289217113000-0600)/",
+  "createTime": "2010-11-08T05:51:53",
   "owner": {
     "id": 19059,
-    "name": "Adam"
+    "name": "Adam",
+    "userName": "raid5",
+    "email": "amcdonald_3@yahoo.com"
   },
   "members": [
     {
@@ -21,16 +23,20 @@
     {
       "id": 32829,
       "name": "Administrators",
+      "access": "read",
       "members": [
         {
           "id": 19059,
-          "name": "Adam"
+          "name": "Adam",
+          "userName": "raid5",
+          "email": "amcdonald_3@yahoo.com"
         }
       ]
     },
     {
       "id": 32830,
       "name": "Members",
+      "access": "read",
       "members": [
 
       ]

@@ -14,7 +14,7 @@ describe AgileZen::Projects do
 
         response = @client.projects
 
-        response.projects.items.project.first.name.should eq('World Peace')
+        response.items.first.name.should eq('Sudden Valley')
       end
       
       it "allows filtering" do
@@ -30,16 +30,16 @@ describe AgileZen::Projects do
   describe "#project" do
     context "success" do
       it "performs an API request for a single project" do
-        register_get('https://agilezen.com/api/v1/project/123', 'project.json')
+        register_get('https://agilezen.com/api/v1/projects/1', 'project.json')
 
-        response = @client.project(123)
+        response = @client.project(1)
 
-        response.id.should eq(123)
-        response.name.should eq('Hippie Peace')
+        response.id.should eq(1)
+        response.name.should eq('Sudden Valley')
       end
       
       it "includes enrichments" do
-        register_get('https://agilezen.com/api/v1/project/15404?with=details%2Cphases%2Cmembers%2Croles%2Cinvites%2Cmetrics', 'project/15404-with-enrichments.json')
+        register_get('https://agilezen.com/api/v1/projects/15404?with=details%2Cphases%2Cmembers%2Croles%2Cinvites%2Cmetrics', 'project/15404-with-enrichments.json')
 
         response = @client.project(15404, :with => 'details,phases,members,roles,invites,metrics')
         
@@ -54,7 +54,7 @@ describe AgileZen::Projects do
     
     context "failure" do
       it "returns nil to indicate failure" do
-        register_get('https://agilezen.com/api/v1/project/99999', 'garbage.txt')
+        register_get('https://agilezen.com/api/v1/projects/99999', 'garbage.txt')
 
         response = @client.project(99999)
 
